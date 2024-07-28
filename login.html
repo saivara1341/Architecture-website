@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(59, 59, 59, 0.39); /* Transparent silver */
+            border: 2px solid rgba(251, 251, 251, 0.473); /* Transparent silver border */
+            padding: 10px;
+            border-radius: 20px;
+            text-align: left;
+            width: 400px;
+        
+        }
+
+        .login-container h1 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 25px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+
+        .login-container label {
+    
+            color: rgb(252, 251, 251);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         }
+
+        .login-container input {
+            width: calc(100% - 10px); /* Adjust width to fit container */
+            padding: 10px;
+            font-size: 18px;
+            margin: 5px 0;
+            color:azure;
+            font-style: italic;
+            border: 1px solid #c0bebed3;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .login-container .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            
+        }
+
+        .login-container .form-group label {
+            flex: 1;
+            font-size: 20px;
+            margin-right: 10px;
+            text-align: right; /* Align labels to the right */
+        }
+
+        .login-container button {
+             display: block;
+             margin: 20px auto;
+             width: 28%;
+             padding: 10px;
+             background-color: rgb(6, 49, 16); 
+             border: 2px solid #12010100;
+             border-radius: 5px;
+             cursor: pointer;
+             color: #dddddd; 
+             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+             font-size: 20px; 
+            }
+        .login-container button:hover {
+            background-color: rgb(47, 15, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video/login.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="index.html">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
